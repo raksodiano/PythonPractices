@@ -49,9 +49,9 @@ def game_hangman():
 
     print("Welcome to the incredible game of Hangman!")
     print(f"In this opportunity you have {attempts} guesses to guess the word")
-    print(progress(secret_word, letters_guessed))
 
     while not game_over and attempts > 0:
+        print(progress(secret_word, letters_guessed))
         answer = input("Enter a letter: ").lower()
 
         if len(answer) != 1 or not answer.isalpha():
@@ -79,6 +79,7 @@ def game_hangman():
 
     if attempts == 0:
         print(f"Sorry, the word was {secret_word}")
+        print("x_x")
 
 
 game_hangman()
